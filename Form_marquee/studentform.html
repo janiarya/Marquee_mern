@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+      }
+      table {
+        border-collapse: collapse;
+        margin-left: 80px;
+        margin-top: -15px;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        
+      }
+      label {
+        display: inline-block;
+        width: 80px;
+        margin-bottom: 10px;
+      }
+      div{
+    border: 2px solid black;
+    padding: 20px;
+    width: fit-content;
+    margin: auto;
+    background-color: aqua;
+}
+    </style>
+  </head>
+  <body>
+    <h3 align="center">Student Registration Form</h3>
+    <div>
+    <form action="actionpage.html" method="get">
+
+        <label for="first_name">First Name</label>
+        <input id="first_name" name="first_name" />(max 30 character a-z and
+        A-Z)
+        <br />
+      <label for="last_name">Last Name</label>
+      <input id="last_name" name="last_name" />(max 30 character a-z and A-Z)<br>
+      <label for="DOB">Date of Birth</label>
+      <input type="date" id="DOB" name="DOB" /><br />
+      <label for="email">Email ID</label>
+      <input type="email" id="email" name="email" /><br />
+      <label for="Mo_number">Mobile Number</label>
+      <input type="number" />(10 Digit number)<br />
+      <label for="gender" width="auto">Gender </label>
+      <input type="radio" id="male_yes" name="gender" />Male
+      <input type="radio" id="female_yes" name="gender" />Female<br />
+      <label for="address">Address</label>
+      <textarea></textarea><br />
+      <label for="city">City</label>
+      <input type="text" name="city" id="city" /><br />
+      <label for="pincode">Pincode</label>
+      <input type="number" id="pincode" name="pincode" />(8 digit Number)<br />
+      <label for="state">State</label>
+      <input type="text" name="state" id="state" />(max 30 character a-z and
+      A-Z)<br />
+      <label for="country">Country</label>
+      <input name="country" id="country" value="India" readonly />
+      <br />
+      <label for="hobbies" width="auto">Hobbies</label>
+      <input type="checkbox" name="Hobbies_1" id="hobbies" />Drawing
+      <input type="checkbox" name="Hobbies_2" id="hobbies" />Singing
+      <input type="checkbox" name="Hobbies_3" id="hobbies" />Sketching
+      <br />
+      <label></label>
+      <input type="checkbox" name="Hobbies_1" id="hobbies" />Others<input />
+      <br />
+      <label for="Qualification">Qualification</label>
+      <table>
+        <tr>
+          <th>SI.no</th>
+          <th>Examination</th>
+          <th>Board</th>
+          <th>Percentage</th>
+          <th>Year of passing</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>class X</td>
+          <td><input /></td>
+          <td><input /></td>
+          <td><input /></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>class XII</td>
+          <td><input /></td>
+          <td><input /></td>
+          <td><input /></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Graduation</td>
+          <td><input /></td>
+          <td><input /></td>
+          <td><input /></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Masters</td>
+          <td><input /></td>
+          <td><input /></td>
+          <td><input /></td>
+        </tr>
+      </table>
+      <br />
+      <label for="courses">Courses Applied</label>
+      <input type="radio" name="course_1" id="course" />BCA
+      <input type="radio" name="course_2" id="course" />B. com
+      <input type="radio" name="course_3" id="course" />B.A
+      <input type="radio" name="course_4" id="course" />B.Sc
+      <br />
+      <p style="text-align: center;">
+      <input type="submit" value="Submit" />
+      <input type="reset" value="reset" />
+    </p>
+    </form>
+</div>
+  </body>
+</html>

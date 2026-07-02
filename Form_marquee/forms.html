@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sports Physical Form</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, #8ec5fc, transparent 35%),
+        radial-gradient(circle at bottom right, #e0c3fc, transparent 35%),
+        linear-gradient(135deg, #f5f7fa, #e4ecf7);
+      color: #222;
+      padding: 40px 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      color: #431031;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #0a707e;
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      border-radius: 28px;
+      padding: 35px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18);
+    }
+
+    fieldset {
+      border: none;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 28px;
+      border-radius: 22px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 25px rgba(16, 42, 67, 0.1);
+      transition: 0.3s ease;
+    }
+
+    fieldset:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 35px rgba(16, 42, 67, 0.16);
+    }
+
+    legend {
+      background: linear-gradient(135deg, #123c69, #1f7a8c);
+      color: white;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      box-shadow: 0 6px 15px rgba(18, 60, 105, 0.3);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #243b53;
+      font-size: 15px;
+    }
+
+    input,
+    select,
+    textarea {
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"],
+    input[type="datetime-local"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 13px 15px;
+      border: 2px solid transparent;
+      border-radius: 14px;
+      background: #f4f8fb;
+      outline: none;
+      transition: 0.25s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      background: white;
+      border-color: #1f7a8c;
+      box-shadow: 0 0 0 5px rgba(31, 122, 140, 0.14);
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .option-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .option-box input {
+      display: none;
+    }
+
+    .option-box label {
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: #eef4f8;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: 0.25s ease;
+      user-select: none;
+    }
+
+    .option-box input:checked+label {
+      background: #123c69;
+      color: white;
+      border-color: #123c69;
+      box-shadow: 0 6px 15px rgba(18, 60, 105, 0.25);
+    }
+
+    .option-title {
+      font-weight: bold;
+      color: #102a43;
+      margin-top: 15px;
+      margin-bottom: 5px;
+    }
+
+    input[type="file"] {
+      background: white;
+      cursor: pointer;
+    }
+
+    input[type="file"]::file-selector-button {
+      border: none;
+      padding: 9px 15px;
+      margin-right: 12px;
+      border-radius: 10px;
+      background: #123c69;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="file"]::file-selector-button:hover {
+      background: #0b2745;
+    }
+
+    .btn-group {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="reset"] {
+      flex: 1;
+      padding: 16px;
+      border: none;
+      border-radius: 16px;
+      font-size: 17px;
+      font-weight: bold;
+      letter-spacing: 0.7px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(135deg, #123c69, #1f7a8c);
+      color: white;
+      box-shadow: 0 10px 25px rgba(18, 60, 105, 0.35);
+    }
+
+    input[type="reset"] {
+      background: #e9eef3;
+      color: #243b53;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      transform: translateY(-4px);
+    }
+
+    input[type="submit"]:active,
+    input[type="reset"]:active {
+      transform: scale(0.97);
+    }
+
+    @media (max-width: 700px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      form {
+        padding: 22px;
+      }
+
+      fieldset {
+        padding: 22px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .btn-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Sports Physical Form</h1>
+    <p class="subtitle">Complete athlete, medical, and participation details</p>
+
+    <form action="actionpage.html" method="post" >
+
+      <fieldset>
+        <legend>Athlete Information</legend>
+
+        <div class="grid">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" name="username" id="name" placeholder="Enter your name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="school">School/Team:</label>
+            <input type="text" name="school" id="school" required />
+          </div>
+
+          <div class="form-group">
+            <label for="sport">Sport:</label>
+            <input type="text" name="sport" id="sport" required />
+          </div>
+
+          <div class="form-group">
+            <label for="parent">Parent/Guardian Name:</label>
+            <input type="text" name="parent" id="parent" required />
+          </div>
+
+          <div class="form-group full">
+            <label for="number">Contact Number:</label>
+            <input type="tel" name="number" id="number" required />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Medical History</legend>
+
+        <p class="option-title">History of Concussions:</p>
+        <div class="option-box">
+          <input type="radio" name="history_concussion" id="concussion_yes" value="yes" />
+          <label for="concussion_yes">Yes</label>
+
+          <input type="radio" name="history_concussion" id="concussion_no" value="no" />
+          <label for="concussion_no">No</label>
+        </div>
+
+        <div class="grid">
+          <div class="form-group full">
+            <label for="prev_surgery">Previous Surgeries:</label>
+            <input type="text" name="prev_surgery" id="prev_surgery" />
+          </div>
+        </div>
+
+        <p class="option-title">Any Bone Fractures:</p>
+        <div class="option-box">
+          <input type="radio" name="bone_frac" id="bone_frac_yes" value="yes" />
+          <label for="bone_frac_yes">Yes</label>
+
+          <input type="radio" name="bone_frac" id="bone_frac_no" value="no" />
+          <label for="bone_frac_no">No</label>
+        </div>
+
+        <p class="option-title">Asthma or Breathing Problem:</p>
+        <div class="option-box">
+          <input type="radio" name="problem_breathing" id="breathing_yes" value="yes" />
+          <label for="breathing_yes">Yes</label>
+
+          <input type="radio" name="problem_breathing" id="breathing_no" value="no" />
+          <label for="breathing_no">No</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Doctor's Recommendation</legend>
+
+        <p class="option-title">Cleared for Sports:</p>
+        <div class="option-box">
+          <input type="radio" name="clear" id="clear_yes" value="yes" />
+          <label for="clear_yes">Yes</label>
+
+          <input type="radio" name="clear" id="clear_no" value="no" />
+          <label for="clear_no">No</label>
+        </div>
+
+        <div class="grid">
+          <div class="form-group">
+            <label for="reason">If not cleared, reason:</label>
+            <input type="text" name="reason" id="reason" placeholder="Enter reason if not cleared" />
+          </div>
+
+          <div class="form-group">
+            <label for="sig">Physician Signature:</label>
+            <input type="text" name="signature" id="sig" />
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Department & Hobbies</legend>
+
+        <div class="grid">
+          <div class="form-group">
+            <label for="department_name">Select Department:</label>
+            <select id="department_name" name="department_name" required>
+              <option value="">Select your Department</option>
+              <option value="AIML">AIML</option>
+              <option value="CSE">CSE</option>
+              <option value="AIDS">AIDS</option>
+            </select>
+          </div>
+
+          <div>
+            <p class="option-title">Hobbies:</p>
+            <div class="option-box">
+              <input type="checkbox" id="cricket" name="hobbies" value="cricket" />
+              <label for="cricket">Cricket</label>
+
+              <input type="checkbox" id="football" name="hobbies" value="football" />
+              <label for="football">Football</label>
+
+              <input type="checkbox" id="music" name="hobbies" value="music" />
+              <label for="music">Music</label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Address</legend>
+
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea name="address" id="address" placeholder="Enter your address"></textarea>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>General Information</legend>
+
+        <div class="grid">
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="passwrd">Password:</label>
+            <input type="password" name="passwrd" id="passwrd" required />
+          </div>
+
+          <div class="form-group">
+            <label for="num">Secondary Number:</label>
+            <input type="tel" name="num" id="num" />
+          </div>
+
+          <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="datetime-local" id="date" name="date" />
+          </div>
+
+          <div class="form-group">
+            <label for="profile_pic">Profile:</label>
+            <input type="file" name="profile_pic" id="profile_pic" accept=".jpg,.png,.jpeg" />
+          </div>
+
+          <div class="form-group">
+            <label for="resume">Resume:</label>
+            <input type="file" name="resume" id="resume" accept=".pdf" />
+          </div>
+
+          <div class="form-group">
+            <label for="word_file">Word File:</label>
+            <input type="file" name="word_file" id="word_file" accept=".doc,.docx" />
+          </div>
+
+          <div class="form-group">
+            <label for="excel_sheet">Excel File:</label>
+            <input type="file" name="excel_sheet" id="excel_sheet" accept=".xls,.xlsx" />
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="btn-group">
+        <input type="reset" value="Reset" />
+        <input type="submit" value="Submit Form" />
+      </div>
+
+    </form>
+  </div>
+</body>
+
+</html>

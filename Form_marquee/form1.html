@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Sports Physical Form</h1>
+    <form action="actionpage.html" method="get">
+      <fieldset>
+        <legend>
+          <h4>Athelete Information</h4>
+        </legend>
+        <ul>
+          <li>
+            <label for="name">Name :</label>
+            <input
+              type="text"
+              name="username"
+              id="name"
+              placeholder="Enter your Name"
+            />
+          </li>
+          <li>
+            <label for="school">School/team :</label>
+            <input type="text" name="school" id="school" />
+          </li>
+          <li>
+            <label for="sport">Sport:</label>
+            <input type="text" name="sport" id="sport" />
+          </li>
+          <li>
+            <label for="parent">Parent/Guardian Name:</label>
+            <input type="text" name="parent" id="parent" />
+          </li>
+          <li>
+            <label for="number">contact Number :</label>
+            <input type="text" name="number" id="number" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h4>Medical History for Athelete</h4>
+        </legend>
+        <ul>
+          <li>
+            <label for="history_concussion">History of Concussions:</label>
+            <input
+              type="radio"
+              name="history_concussion"
+              id="history_concussion_yes"
+              value="history_concussion_yes"
+            />yes
+            <input
+              type="radio"
+              name="history_concussion"
+              id="history_concussion_no"
+              value="history_concussion_no"
+            />no
+          </li>
+          <li>
+            <label for="prev_surgery">Previous Surgeries</label>
+            <input type="text" name="prev_surgery" id="prev_surgery" />
+          </li>
+          <li>
+            <label for="bone_frac">Any bone Fractures:</label>
+            <input
+              type="radio"
+              name="bone_frac"
+              id="bone_frac"
+              value="bone_frac_yes"
+            />yes
+            <input
+              type="radio"
+              name="bone_frac"
+              id="bone_frac"
+              value="bone_frac_no"
+            />no
+          </li>
+          <li>
+            <label for="problem_breathing">Asthma or breathing Problem:</label>
+            <input
+              type="radio"
+              name="problem_breathing"
+              id="problem_breathing"
+              value="problem_breathing_yes"
+            />yes
+            <input
+              type="radio"
+              name="problem_breathing"
+              id="problem_breathing"
+              value="problem_breathing_no"
+            />no
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h4>Doctor's Recommendation for sports participation</h4>
+        </legend>
+        <ul>
+          <li>
+            <label for="clear">Cleared for sports:</label>
+            <input type="radio" name="clear" id="clear_yes" /><label
+              for="clear_yes"
+              >yes</label
+            >
+            <input type="radio" name="clear" id="clear_no" /><label
+              for="clear_no"
+              >no</label
+            >
+          </li>
+          <li>
+            <label for="reason">if not cleared reason : </label>
+            <input name="reason" id="reason" value="no reason" readonly />
+          </li>
+          <li>
+            <label for="sig">Physician Signature : </label>
+            <input type="text" />
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h4>Select Your Department</h4>
+        </legend>
+        <select id="department_name" name="department_name">
+          <option value="null">Select your Department</option>
+          <option value="AIML">AIML</option>
+          <option value="CSE">CSE</option>
+          <option value="AIDS">AIDS</option>
+        </select>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h4>Hobbies</h4>
+        </legend>
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" id="cricket" name="value_1" value="cricket" />
+        <label for="football">Football</label>
+        <input type="checkbox" id="football" name="value_2" value="football" />
+        <label for="music">Music</label>
+        <input type="checkbox" id="music" value="music" name="value_3" />
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h4>Enter Address</h4>
+        </legend>
+      <label for="address">Address : </label> <textarea>Address</textarea>
+      </fieldset>
+      <fieldset>
+        <legend>
+          <h4>General Information</h4>
+        </legend>
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" /> <br />
+        <label for="passwrd">Password</label>
+        <input type="password" value="passwrd" name="passwrd" id="passwrd" />
+        <br />
+        <label for="num">Secondary number : </label>
+        <input type="number" name="num" id="num" /> <br />
+        <label for="date">Date : </label>
+        <input type="datetime-local" id="date" name="date" /> <br />
+        <label for="Profile_pic">Profile : </label>
+        <input
+          type="file"
+          name="Profile_pic"
+          id="Profile_pic"
+          accept=".jpg,.png,.jpeg"
+        />
+        <br />
+        <label for="resume">Resume : </label>
+        <input type="file" name="resume" id="resume" accept=".pdf" /> <br />
+        <label for="Word File">Word File : </label>
+        <input type="file" name="Word File" id="Word File" accept=".docx" />
+        <br />
+        <label for="Excel Sheet">Excel File : </label>
+        <input type="file" name="Excel Sheet" id="Excel Sheet" accept=".xlxs" />
+      </fieldset>
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
