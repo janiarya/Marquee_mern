@@ -1,0 +1,28 @@
+body {
+    font-family: lucida sans, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;   
+    font-weight: bolder;
+    font-size: larger;
+
+}
+h3:hover{
+    color: #2f94a3;
+    cursor: pointer;
+    transform: scale(1.04);
+    border: 3px solid #2f94a3;
+    border-radius: 10px;
+    
+
+}
+#external-css {
+    color: #e41a1a;
+    
+
+}
+
+
+h3 {
+    color: #333;
+}
+/* External CSS */
