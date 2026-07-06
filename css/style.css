@@ -12,6 +12,8 @@ h3:hover{
     transform: scale(1.04);
     border: 3px solid #2f94a3;
     border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
     
 
 }
@@ -20,7 +22,17 @@ h3:hover{
     
 
 }
-
+#hover-text:hover {
+    color: #2f94a3;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scale(1.03);
+}
+#hover-text {
+    color: purple
+}
 
 h3 {
     color: #333;

@@ -1,62 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Intro to CSS</title>
     <!-- Internal CSS -->
     <style>
-        ul:hover{
-            list-style-type: lower-roman;
-            cursor: pointer;
-            transition: 0.5s;
-            transform: scale(1.05);
-    
-        }
-        #internal-css{
-            color: green;
-        }
-        .formatting{
-            color: red;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 5px;
-            border-bottom: 3px solid black;
-        }
-        .formatting:hover{
-            background-color: lightgray;
-            cursor: pointer;
-            transition: 0.5s;
-            transform: scale(1.05);
-        }
-        .format:hover{
-            color: purple;
-            font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-            cursor: pointer;
-            transition: 0.5s;
-            transform: scale(1.05);
-            border-radius: 5px;
-            border: 3px solid black;
-            padding: 10px;
-        }
+      ul:hover {
+        list-style-type: lower-roman;
+        cursor: pointer;
+        transition: 0.5s;
+        transform: scale(1.05);
+      }
+      #internal-css {
+        color: green;
+      }
+      .formatting {
+        color: red;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        border-bottom: 3px solid black;
+      }
+      .formatting:hover {
+        background-color: lightgray;
+        cursor: pointer;
+        transition: 0.5s;
+        transform: scale(1.05);
+      }
+      .format:hover {
+        color: purple;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        transition: 0.5s;
+        transform: scale(1.05);
+        border-radius: 5px;
+        border: 3px solid black;
+        padding: 10px;
+      }
+      .format{
+        color:blueviolet
+      }
+      .new{
+        color: rgb(218, 145, 145);
+        font-size: 20px;
+        font-weight: bold;
         
+       
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Inline css -->
-    <h3>Types of CSS : </h3>
+    <h3>Types of CSS :</h3>
     <ul>
-        <li style="color: blue;">Inline CSS</li>
-        <li id="internal-css">Internal CSS</li>
-        <li id="external-css">External CSS</li>
-    </ul> 
-    <ul>
-        <li class="formatting">External CSS</li>
-        <li class="formatting">Internal CSS</li>
+      <li style="color: blue">Inline CSS</li>
+      <li id="internal-css">Internal CSS</li>
+      <li id="external-css">External CSS</li>
     </ul>
-    <p class="format">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id dolorum fugiat soluta eligendi excepturi et quibusdam inventore quas iusto, eaque eos, blanditiis recusandae quis, facere sed nulla aperiam cum minima.</p>
-    
-</body>
+    <ul>
+      <li class="formatting">External CSS</li>
+      <li class="formatting">Internal CSS</li>
+    </ul>
+    <p class="format">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id dolorum
+      fugiat soluta eligendi excepturi et quibusdam inventore quas iusto, eaque
+      eos, blanditiis recusandae quis, facere sed nulla aperiam cum minima.
+    </p>
+    <section class="format">
+      <h3>External CSS</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+        voluptatum.
+      </p>
+    </section>
+    <section class="new">
+      <div>
+        <p id="hover-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+          voluptatum.
+        </p>
+      </div>
+      <p>lorem ipsum dolor sit amet</p>
+    </section>
+  </body>
 </html>
