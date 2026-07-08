@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="A professional About Us page for Parul University with details about fees, admissions, placements, programs, and facilities." />
+    <meta name="keywords" content="Parul University, PU, Vadodara, admissions, placements, programs" />
+    <meta name="author" content="Parul University" />
+
+    <title>About Us | Parul University</title>
+
+    <link rel="shortcut icon" href="https://i.pinimg.com/736x/35/4e/41/354e41b970004cac05cbe77bbc681ad8.jpg"
+        type="image/x-icon" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background: #f8fafc;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.94);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+        }
+
+        .navbar {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            color: #991b1b;
+            letter-spacing: 0.3px;
+        }
+
+        .brand-logo {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 999px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #334155;
+            transition: 0.25s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            background: #b91c1c;
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            min-height: 680px;
+            display: grid;
+            place-items: center;
+            color: #ffffff;
+            text-align: center;
+            background:
+                linear-gradient(rgba(15, 23, 42, 0.7), rgba(127, 29, 29, 0.7)),
+                url("https://www.paruluniversity.ac.in/wp-content/uploads/2025/07/Main-gate-wide-photo-EDITED-scaled-e1752558962381.jpg") center/cover;
+        }
+
+        .hero-content {
+            width: min(820px, 92%);
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 18px;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.12);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: clamp(38px, 7vw, 76px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 720px;
+            margin: 0 auto 32px;
+            font-size: clamp(17px, 2vw, 21px);
+            color: #f8fafc;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 24px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: 0.25s ease;
+        }
+
+        .btn-primary {
+            background: #ffffff;
+            color: #991b1b;
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            color: #ffffff;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .section {
+            padding: 88px 0;
+        }
+
+        .section-title {
+            max-width: 760px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .section-title h2 {
+            color: #991b1b;
+            font-size: clamp(30px, 4vw, 44px);
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            padding: 28px;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+            transition: 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.13);
+        }
+
+        .card-number {
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            margin-bottom: 18px;
+            border-radius: 14px;
+            background: #fee2e2;
+            color: #991b1b;
+            font-weight: 800;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+            color: #0f172a;
+            font-size: 22px;
+        }
+
+        .card p {
+            margin-bottom: 20px;
+            color: #64748b;
+        }
+
+        .card-link {
+            color: #b91c1c;
+            font-weight: 800;
+        }
+
+        .stats {
+            background: #111827;
+            color: #ffffff;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 28px 18px;
+            border-radius: 22px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-item strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 34px;
+            color: #fecaca;
+        }
+
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #991b1b, #ef4444);
+            color: #ffffff;
+        }
+
+        .cta h2 {
+            margin-bottom: 14px;
+            font-size: clamp(30px, 4vw, 44px);
+        }
+
+        .cta p {
+            max-width: 680px;
+            margin: 0 auto 28px;
+            color: #fee2e2;
+        }
+
+        .site-footer {
+            padding: 32px 0;
+            color: #cbd5e1;
+            background: #020617;
+            text-align: center;
+        }
+
+        .back-to-top {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 56px;
+            height: 56px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #b91c1c;
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 800;
+            box-shadow: 0 12px 30px rgba(185, 28, 28, 0.35);
+            transition: 0.25s ease;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-4px);
+            background: #7f1d1d;
+        }
+
+        @media (max-width: 900px) {
+            .navbar {
+                align-items: flex-start;
+                flex-direction: column;
+                padding: 18px 0;
+            }
+
+            .info-grid,
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                gap: 6px;
+            }
+
+            .nav-links a {
+                padding: 8px 10px;
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 560px;
+            }
+
+            .info-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 64px 0;
+            }
+        }
+    </style>
+</head>
+
+<body id="top">
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Primary navigation">
+            <a href="#top" class="brand">
+                <img src="https://i.pinimg.com/736x/35/4e/41/354e41b970004cac05cbe77bbc681ad8.jpg"
+                    alt="Parul University logo" class="brand-logo" />
+                <span>Parul University</span>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#fees">Fees</a></li>
+                <li><a href="#admission">Admission</a></li>
+                <li><a href="#placement">Placement</a></li>
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">Discover. Innovate. Learn.</span>
+                <h1>About Parul University</h1>
+                <p>
+                    A destination for quality education, practical learning, innovation,
+                    and career-focused growth in a diverse academic environment.
+                </p>
+                <div class="btn-group">
+                    <a href="#general-info" class="btn btn-primary">Explore More</a>
+                    <a href="https://www.paruluniversity.ac.in/about-us/" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-secondary">Official Website</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="general-info">
+            <div class="container">
+                <div class="section-title">
+                    <h2>PU General Information</h2>
+                    <p>
+                        Important areas students usually look for before choosing a
+                        university: fees, admissions, placements, programs, and facilities.
+                    </p>
+                </div>
+
+                <div class="info-grid">
+                    <article class="card" id="fees">
+                        <div class="card-number">01</div>
+                        <h3>Fees Structure</h3>
+                        <p>
+                            Get a clear overview of tuition fees, semester charges,
+                            scholarships, and financial assistance options available for
+                            students.
+                        </p>
+                        <a href="https://www.paruluniversity.ac.in/about-us/" target="_blank" rel="noopener noreferrer"
+                            class="card-link">View details →</a>
+                    </article>
+
+                    <article class="card" id="admission">
+                        <div class="card-number">02</div>
+                        <h3>Admission Process</h3>
+                        <p>
+                            Learn about eligibility, required documents, application steps,
+                            counselling process, and important admission-related updates.
+                        </p>
+                        <a href="https://www.paruluniversity.ac.in/about-us/" target="_blank" rel="noopener noreferrer"
+                            class="card-link">View details →</a>
+                    </article>
+
+                    <article class="card" id="placement">
+                        <div class="card-number">03</div>
+                        <h3>Placement Support</h3>
+                        <p>
+                            Explore training support, placement preparation, company visits,
+                            internships, and career guidance provided to students.
+                        </p>
+                        <a href="https://www.paruluniversity.ac.in/about-us/" target="_blank" rel="noopener noreferrer"
+                            class="card-link">View details →</a>
+                    </article>
+
+                    <article class="card" id="programs">
+                        <div class="card-number">04</div>
+                        <h3>Programs We Offer</h3>
+                        <p>
+                            Discover programs across engineering, technology, management,
+                            health sciences, design, pharmacy, arts, and more.
+                        </p>
+                        <a href="https://www.paruluniversity.ac.in/about-us/" target="_blank" rel="noopener noreferrer"
+                            class="card-link">View details →</a>
+                    </article>
+
+                    <article class="card" id="facilities">
+                        <div class="card-number">05</div>
+                        <h3>Campus Facilities</h3>
+                        <p>
+                            Modern classrooms, labs, libraries, hostels, sports spaces, and
+                            student support services help create a complete campus life.
+                        </p>
+                        <a href="https://www.paruluniversity.ac.in/about-us/" target="_blank" rel="noopener noreferrer"
+                            class="card-link">View details →</a>
+                    </article>
+
+                    <article class="card">
+                        <div class="card-number">06</div>
+                        <h3>Student Experience</h3>
+                        <p>
+                            A professional university page should also show culture, student
+                            activities, clubs, events, and learning opportunities beyond the
+                            classroom.
+                        </p>
+                        <a href="#top" class="card-link">Back to top ↑</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section stats">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <strong>05+</strong>
+                    <span>Key Student Areas</span>
+                </div>
+                <div class="stat-item">
+                    <strong>100%</strong>
+                    <span>Responsive Layout</span>
+                </div>
+                <div class="stat-item">
+                    <strong>SEO</strong>
+                    <span>Friendly Structure</span>
+                </div>
+                <div class="stat-item">
+                    <strong>Clean</strong>
+                    <span>Professional Code</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section cta">
+            <div class="container">
+                <h2>Ready to explore Parul University?</h2>
+                <p>
+                    Visit the official website to check the latest details about courses,
+                    admissions, fees, campus life, and student opportunities.
+                </p>
+                <a href="https://www.paruluniversity.ac.in/about-us/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">Visit Official Page</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2026 Parul University. Designed as a professional practice webpage.</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+</body>
+
+</html>
