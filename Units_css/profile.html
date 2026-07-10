@@ -1,194 +1,218 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Profile Card</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card - BEM</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-      body {
-        font-family: "Poppins", sans-serif;
-        background: linear-gradient(135deg, #dbeafe, #f8fafc);
-        min-height: 100vh;
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #dbeafe, #f8fafc);
+      min-height: 100vh;
 
-      .content {
-        width: 350px;
-        background: white;
-        border-radius: 20px;
-        overflow: hidden;
-        position: relative;
-        text-align: center;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        padding-bottom: 20px;
-      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-      .top-bg {
-        width: 100%;
-        height: 120px;
-        background: rgb(44, 116, 164);
-      }
+    /* Block */
+    .profile-card {
+      width: 350px;
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      padding-bottom: 20px;
+    }
 
-      .profile {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        border: 5px solid white;
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        object-fit: cover;
-      }
+    /* Elements */
+    .profile-card__header {
+      width: 100%;
+      height: 120px;
+      background: rgb(44, 116, 164);
+    }
 
-      .child {
-        margin-top: 85px;
-        color: rgb(55, 55, 94);
-      }
+    .profile-card__image {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 5px solid white;
+      position: absolute;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      object-fit: cover;
+    }
 
-      .child h3 {
-        font-size: 28px;
-      }
+    .profile-card__body {
+      margin-top: 85px;
+      color: rgb(55, 55, 94);
+    }
 
-      .child p {
-        margin-top: 5px;
-        margin-bottom: 20px;
-      }
+    .profile-card__name {
+      font-size: 28px;
+    }
 
-      .icons {
-        display: flex;
-        justify-content: center;
-        gap: 18px;
-        margin-bottom: 25px;
-      }
+    .profile-card__profession {
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
 
-      .icons i {
-        font-size: 26px;
-        transition: 0.8s;
-        cursor: pointer;
-      }
+    .profile-card__social {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      margin-bottom: 25px;
+    }
 
-      .icons i:hover {
-        transform: scale(1.3);
-      }
+    .profile-card__icon {
+      font-size: 26px;
+      transition: 0.8s;
+      cursor: pointer;
+    }
 
-      .fa-facebook {
-        color: #1877f2;
-      }
+    .profile-card__icon:hover {
+      transform: scale(1.3);
+    }
 
-      .fa-whatsapp {
-        color: #25d366;
-      }
+    .fa-facebook {
+      color: #1877f2;
+    }
 
-      .fa-instagram {
-        color: #e4405f;
-      }
+    .fa-whatsapp {
+      color: #25d366;
+    }
 
-      .fa-youtube {
-        color: #ff0000;
-      }
+    .fa-instagram {
+      color: #e4405f;
+    }
 
-      .button-css {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
+    .fa-youtube {
+      color: #ff0000;
+    }
 
-      button {
-        background: rgb(70, 70, 172);
-        color: white;
-        border: none;
-        border-radius: 25px;
-        padding: 10px 30px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: 0.3s;
-      }
+    .profile-card__buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
 
-      button:hover {
-        transform: scale(1.05);
-      }
-      .stats {
-        display: flex;
-        justify-content: center;
-        margin-top: 25px;
-      }
+    .profile-card__button {
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 30px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-      .stats div {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        padding: 0 18px;
-        border-right: 1px solid #bbb;
-      }
+    .profile-card__button:hover {
+      transform: scale(1.05);
+    }
 
-      .stats div:last-child {
-        border-right: none;
-      }
-    </style>
-  </head>
+    /* Modifiers */
+    .profile-card__button--primary {
+      background: rgb(70, 70, 172);
+    }
 
-  <body>
-    <div class="content">
-      <div class="top-bg"></div>
+    .profile-card__button--secondary {
+      background: rgb(70, 70, 172);
+    }
 
-      <img
-        src="https://tse4.mm.bing.net/th/id/OIP.k7Q1aP2J6cGwT_fxr_exKwAAAA?r=0&pid=Api&P=0&h=180"
-        class="profile"
-      />
+    .profile-card__stats {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
 
-      <div class="child">
-        <h3>CodingLab</h3>
-        <p>YouTuber & Blogger</p>
+    .profile-card__stat {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0 18px;
+      border-right: 1px solid #bbb;
+    }
 
-        <div class="icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-whatsapp"></i>
-          <i class="fa-brands fa-instagram"></i>
-          <i class="fa-brands fa-youtube"></i>
-        </div>
+    .profile-card__stat:last-child {
+      border-right: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="profile-card">
+
+    <div class="profile-card__header"></div>
+
+    <img src="https://tse4.mm.bing.net/th/id/OIP.k7Q1aP2J6cGwT_fxr_exKwAAAA?r=0&pid=Api&P=0&h=180" alt="Profile"
+      class="profile-card__image">
+
+    <div class="profile-card__body">
+
+      <h3 class="profile-card__name">CodingLab</h3>
+
+      <p class="profile-card__profession">
+        YouTuber & Blogger
+      </p>
+
+      <div class="profile-card__social">
+        <i class="fa-brands fa-facebook profile-card__icon"></i>
+        <i class="fa-brands fa-whatsapp profile-card__icon"></i>
+        <i class="fa-brands fa-instagram profile-card__icon"></i>
+        <i class="fa-brands fa-youtube profile-card__icon"></i>
       </div>
 
-      <div class="button-css">
-        <button>Subscribe</button>
-        <button>Message</button>
-      </div>
-      <div class="stats">
-        <div>
-          <i class="fa-regular fa-heart"></i>
-          <p>60.4k</p>
-        </div>
-
-        <div>
-          <i class="fa-regular fa-comment"></i>
-          <p>20k</p>
-        </div>
-
-        <div>
-          <i class="fa-solid fa-share"></i>
-          <p>12.4k</p>
-        </div>
-      </div>
     </div>
-  </body>
+
+    <div class="profile-card__buttons">
+
+      <button class="profile-card__button profile-card__button--primary">
+        Subscribe
+      </button>
+
+      <button class="profile-card__button profile-card__button--secondary">
+        Message
+      </button>
+
+    </div>
+
+    <div class="profile-card__stats">
+
+      <div class="profile-card__stat">
+        <i class="fa-regular fa-heart"></i>
+        <p>60.4k</p>
+      </div>
+
+      <div class="profile-card__stat">
+        <i class="fa-regular fa-comment"></i>
+        <p>20k</p>
+      </div>
+
+      <div class="profile-card__stat">
+        <i class="fa-solid fa-share"></i>
+        <p>12.4k</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+
 </html>
