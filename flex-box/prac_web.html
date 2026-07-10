@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services & Why Choose Us</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f4f4f4 ;
+            /* #f4f4f4 */
+            color: #333;
+        }
+
+
+        .services {
+            width: 90%;
+            max-width: 1200px;
+            margin: 60px auto;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: #ffffff;
+
+            border: 1px solid #dddddd;
+            border-radius: 6px;
+            overflow: hidden;
+
+            padding-bottom: 22px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #cb6652;
+            transform: translateY(-4px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+
+            object-fit: cover;
+            display: block;
+
+            background-color: #d9d9d9;
+            border-bottom: 1px solid #dddddd;
+        }
+
+        .card h3 {
+            font-size: 26px;
+            color: #4b4b82;
+
+            margin: 20px 20px 12px;
+        }
+
+        .card p {
+            color: #666666;
+            line-height: 1.7;
+            font-size: 15px;
+
+            margin: 0 20px;
+        }
+
+
+        .choose {
+            width: 100%;
+            background-color: #ffffff;
+
+            padding: 70px 20px;
+            border-top: 1px solid #dddddd;
+        }
+
+        .choose h2 {
+            text-align: center;
+
+            font-size: 46px;
+            color: #4b4b82;
+            font-weight: 400;
+        }
+
+        .line {
+            width: 70px;
+            height: 5px;
+
+            background-color: #ef4b2b;
+            margin: 20px auto 50px;
+        }
+
+        .choose-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+
+            border: 1px solid #e0e0e0;
+            background-color: #fafafa;
+        }
+
+        .box {
+            flex: 1;
+            text-align: center;
+
+            padding: 30px 20px;
+            border-right: 1px solid #e0e0e0;
+
+            transition: 0.3s;
+        }
+
+        .box:last-child {
+            border-right: none;
+        }
+
+        .box:hover {
+            background-color: #fff4f1;
+        }
+
+        .box i {
+            font-size: 50px;
+            color: #999999;
+
+            margin-bottom: 20px;
+        }
+
+        .box h4 {
+            color: #d34a33;
+            font-size: 27px;
+            font-weight: 400;
+
+            line-height: 1.4;
+        }
+
+        .box span {
+            display: block;
+
+            font-size: 58px;
+            font-weight: bold;
+            color: #e33d22;
+
+            margin: 5px 0;
+        }
+
+        .box p {
+            margin-top: 15px;
+
+            color: #666666;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        /* ---------------- RESPONSIVE ---------------- */
+
+        @media (max-width: 900px) {
+
+            .services {
+                flex-direction: column;
+            }
+
+            .choose-container {
+                flex-direction: column;
+            }
+
+            .box {
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+
+                padding: 40px 20px;
+            }
+
+            .box:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= SERVICES ================= -->
+
+    <section class="services">
+
+        <div class="card">
+
+            <img src="https://tse2.mm.bing.net/th/id/OIP._xzbgcHP13CS7FklX07hrAHaHa?r=0&pid=Api&P=0&h=500"
+                alt="Modern kitchen remodel">
+
+            <h3>Kitchen Remodels</h3>
+
+            <p>
+                We design and renovate kitchens to make them more modern,
+                comfortable, and practical. Our service includes cabinets,
+                countertops, flooring, lighting, and complete kitchen upgrades.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://tse2.mm.bing.net/th/id/OIP.ZksuDoT6IvVn0ArLn6fsowHaE8?r=0&pid=Api&P=0&h=500"
+                alt="Modern windows and doors">
+
+            <h3>Windows & Doors</h3>
+
+            <p>
+                We install strong and stylish windows and doors that improve
+                your home's appearance, security, ventilation, and energy
+                efficiency.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <img src="https://tse4.mm.bing.net/th/id/OIP.5f9j2FHtmSKOC9Eqplpy6wHaE7?r=0&pid=Api&P=0&h=500"
+                alt="Outdoor decks and porches">
+
+            <h3>Decks & Porches</h3>
+
+            <p>
+                We build attractive and durable decks and porches where you can
+                relax, spend time with family, and enjoy a comfortable outdoor
+                space.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= WHY CHOOSE US ================= -->
+
+    <section class="choose">
+
+        <h2>Why Choose Us</h2>
+
+        <div class="line"></div>
+
+        <div class="choose-container">
+
+            <div class="box">
+
+                <i class="fa-regular fa-star"></i>
+
+                <h4>We Have</h4>
+
+                <span>12+</span>
+
+                <p>
+                    Years of experience in home renovation, repair, and
+                    construction services.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <i class="fa-regular fa-comments"></i>
+
+                <h4>Over</h4>
+
+                <span>95%</span>
+
+                <p>
+                    Of our customers recommend our services to their friends
+                    and family.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <i class="fa-regular fa-id-card"></i>
+
+                <h4>We Are</h4>
+
+                <span>100%</span>
+
+                <p>
+                    Committed to providing safe, reliable, and high-quality
+                    construction work.
+                </p>
+
+            </div>
+
+            <div class="box">
+
+                <i class="fa-regular fa-thumbs-up"></i>
+
+                <h4>Completed</h4>
+
+                <span>500+</span>
+
+                <p>
+                    Home improvement projects with proper planning and
+                    attention to detail.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
