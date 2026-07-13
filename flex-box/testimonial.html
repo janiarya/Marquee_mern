@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="https://i.pinimg.com/736x/35/4e/41/354e41b970004cac05cbe77bbc681ad8.jpg"
+            type="image/x-icon" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f5f8fc;
+        }
+
+        header {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        header h1 {
+            font-size: 48px;
+            color: #173d7a;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .cards {
+            width: 90%;
+            max-width: 1200px;
+            margin: 50px auto;
+
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .box {
+            flex: 1;
+            background: white;
+            border-radius: 8px 8px 18px 18px;
+            padding: 35px;
+            position: relative;
+            border: 1px solid #eee;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+            transition: 0.5s;
+        }
+        .box:hover{
+            transform: scale(1.02);
+            cursor: pointer;
+        }
+
+        .quote {
+            width: 78px;
+            height: 78px;
+            background: #2d7df6;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            border-bottom-left-radius: 80px;
+            border-top-right-radius: 8px;
+        }
+
+        .quote i {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            color: white;
+            font-size: 28px;
+        }
+
+        .box h3 {
+            text-align: center;
+            color: #1b3873;
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .box h6 {
+            text-align: center;
+            color: #d86a6a;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .stars {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .stars i {
+            color: #ffc107;
+            
+        }
+
+        .box p {
+            color: #555;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+    .chatbot-logo {
+        position: fixed;
+        bottom: 0px;
+        
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition:0.3s;
+        font-size: 45px;
+        color: #1b3873;
+        transition: 0.3s;
+      }
+    .whatsapp {
+        position: fixed;
+        bottom: 0px;
+        right: 20px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 0.3s;
+        font-size: 45px;
+        color: #228b22;
+      }
+
+      .chatbot-logo:hover {
+        transform: scale(1.05);
+      }
+      .whatsapp:hover{
+        transform: scale(1.05);
+      }
+      .notification{
+        position: absolute;
+        top: 3px;
+        left: 30px;
+        width: 22px;
+        height: 22px;
+        background-color: #b22222;
+        color: #f5f8fc;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+
+
+      }
+      .whatsapp_notification{
+        position: absolute;
+        top: 6px;
+        left: 25px;
+        width: 22px;
+        height: 22px;
+        background-color: #b22222;
+        color: #f5f8fc;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+
+      }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <h1>What Our Clients Say</h1>
+
+        <p>
+            Read what our satisfied clients have to say about working with QASSERT
+        </p>
+
+    </header>
+
+    <section class="cards">
+
+        
+
+        <div class="box">
+
+            <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+            </div>
+
+            <h3>John Miller</h3>
+
+            <h6>Software Architect</h6>
+
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p>
+                QAssert provided exceptional software testing support, ensuring our
+                product was released bug-free and on schedule. Their attention to
+                detail and professional approach made them a great partner.
+            </p>
+
+        </div>
+
+        
+
+        <div class="box">
+
+            <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+            </div>
+
+            <h3>Samantha Turner</h3>
+
+            <h6>Product Manager</h6>
+
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p>
+                "Working with QAssert was a great experience. Their team quickly
+                identified critical issues, suggested improvements, and ensured our
+                product met the highest quality standards. Highly recommended!"
+            </p>
+
+        </div>
+
+        
+
+        <div class="box">
+
+            <div class="quote">
+                <i class="fa-solid fa-quote-right"></i>
+            </div>
+
+            <h3>Michael Johnson</h3>
+
+            <h6>Tech Lead</h6>
+
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+
+            <p>
+                QAssert's thorough testing saved us time and resources. Their test
+                reports were comprehensive and actionable, helping us maintain
+                product quality. Looking forward to more collaborations!
+            </p>
+
+        </div>
+
+    </section>
+        <!-- <a href="#box_model.html">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.1pR_a0ItdfRfU2ioCXhzHAHaHa?r=0&pid=Api&P=0&h=180"
+                alt="Chatbot" class="chatbot-logo" />
+        </a> -->
+        <div class="chatbot-logo">
+            <i class="fa-brands fa-facebook-messenger"></i>
+            <p class="notification">1</p>
+        </div>
+        
+        <div class="whatsapp">
+            <i class="fa-brands fa-whatsapp"></i>
+            <p class="whatsapp_notification">1</p>
+        </div>
+
+
+</body>
+
+</html>
